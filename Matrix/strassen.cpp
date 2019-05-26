@@ -35,9 +35,9 @@ void delete_dim_matrix(int **matrix, int nlines) {
 }
 
 int **matrix_sum(bool type, int m1[], int m2[], int **matrix_1, int **matrix_2) {
-    int size = m1[0] - m1[2];
+    int size = m1[2] - m1[0];
 
-    if (size != m2[0] - m1[2]) {
+    if (size != m2[2] - m1[0]) {
         cout << "\nError in sum\n";
         return nullptr;
     }
@@ -92,7 +92,7 @@ int reajust(int nline, int ncol) {
 
 int **strassen(int **matrix_0, int **matrix_1, int sizes_0[], int sizes_1[]) {
     if(sizes_0[0] - sizes_0[2] == 0) {
-        int **m = new int*[1];
+        int **m = new int*;
         m[0] = new int (matrix_0[sizes_0[0]][sizes_0[0]] * matrix_1[sizes_1[0]][sizes_1[0]]);
         return m;
     }
@@ -189,7 +189,7 @@ int **strassen(int **matrix_0, int **matrix_1, int sizes_0[], int sizes_1[]) {
     for(i = 0; i < 7; i++) {
         delete_dim_matrix(pointers_m[i], act_size);
     }
-    delete pointers_m;
+    delete [] pointers_m;
 
 
     return result;
@@ -215,7 +215,7 @@ int **matrix_mult_strassen(int *sizes, int *nlines, int *ncol, int **matrix_1, i
                 new_size = aux;
             }
 
-            int i, j, k;
+            int i, j;
             int **new_matrix_1 = create_dim_matrix(new_size, new_size);
             int **new_matrix_2 = create_dim_matrix(new_size, new_size);
 
