@@ -29,7 +29,8 @@ int **create_pre_matrix(int nlines, int ncol) {
 }
 
 void delete_dim_matrix(int **matrix, int nlines) {
-    for(int i = 0; i < nlines; i++) {matrix[i];
+    for(int i = 0; i < nlines; i++) {
+        delete [] matrix[i];
     }
 }
 
