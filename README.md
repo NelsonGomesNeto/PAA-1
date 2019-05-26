@@ -1,4 +1,4 @@
-# Repositório para uma disciplina de PAA (Project and algorithm analysis)
+# Repository for the discipline of PAA (Project and algorithm analysis)
 ## Federal University of Alagoas
 
 ### Matrix
