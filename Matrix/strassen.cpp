@@ -13,6 +13,19 @@ int **create_dim_matrix(const int nlines, const int ncol) {
     return matrix;
 }
 
+int **create_pre_matrix(const int nlines, const int ncol) {
+    int **matrix = new int *[nlines];
+    for(int i = 0; i < nlines; i++) {
+        matrix[i] = new int[ncol];
+
+        for(int j = 0; j < ncol; j ++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    return matrix;
+}
+
 void delete_dim_matrix(int **matrix, int nlines) {
     for(int i = 0; i < nlines; i++) {
         delete [] matrix[i];
@@ -65,10 +78,10 @@ int reajust(int nline, int ncol) {
             if (fmod(log2(nline), 1) == 0) {
                 break;
             }
-        } else {
-            nline++;
-            ncol++;
         }
+
+        nline++;
+        ncol++;
     }
 
     return nline;
@@ -82,7 +95,6 @@ int **strassen(int **matrix_0, int **matrix_1, const int *sizes_0, const int *si
         return m;
     }
 
-    cout << "dasdas\n";
     int i_2 = (sizes_0[0] + sizes_0[2]) / 2, j_2 = (sizes_0[1] + sizes_0[3]) / 2;
     int *a11 = new int[4] {sizes_0[0], sizes_0[1], i_2, j_2};
     int *a12 = new int[4] {sizes_0[0], j_2 + 1, i_2, sizes_0[3]};
@@ -245,7 +257,6 @@ int **matrix_mult_strassen(int *sizes, int *nlines, int *ncol, int **matrix_1, i
         else {
             int size_0[4] = {0, 0, nlines[0] - 1, nlines[0] - 1};
             int size_1[4] = {0, 0, nlines[1] - 1, nlines[1] - 1};
-
             return strassen(matrix_1, matrix_2, size_0, size_1);
         }
     } else {
