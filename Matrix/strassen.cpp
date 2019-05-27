@@ -3,9 +3,7 @@
 
 using namespace std;
 
-int sta[2] = {0, 0};
-
-int **create_dim_matrix(int nlines, int ncol) {
+int **create_dim_matrix(const int nlines, const int ncol) {
     int **matrix = new int *[nlines];
 
     for (int i = 0; i < nlines; i++) {
@@ -21,7 +19,7 @@ void delete_dim_matrix(int **matrix, int nlines) {
     }
 }
 
-int **matrix_sum(bool type, int *m1, int *m2, int **matrix_1, int **matrix_2) {
+int **matrix_sum(bool type, const int *m1, const int *m2, int **matrix_1, int **matrix_2) {
     int size = m1[2] - m1[0] + 1;
 
     if (size != m2[2] - m2[0] + 1) {
@@ -77,7 +75,7 @@ int reajust(int nline, int ncol) {
 }
 
 
-int **strassen(int **matrix_0, int **matrix_1, int *sizes_0, int *sizes_1) {
+int **strassen(int **matrix_0, int **matrix_1, const int *sizes_0, const int *sizes_1) {
     if(sizes_0[2] - sizes_0[0] == 0) {
         int **m = new int*;
         m[0] = new int (matrix_0[sizes_0[0]][sizes_0[1]] * matrix_1[sizes_1[0]][sizes_1[1]]);
