@@ -73,18 +73,13 @@ int reajust(int nline, int ncol) {
         }
     }
 
-    while (true) {
-        if (nline % 2 == 0) {
-            if (fmod(log2(nline), 1) == 0) {
-                break;
-            }
-        }
+    int aux = 0, new_size;
 
-        nline++;
-        ncol++;
+    while (new_size = ((int)pow(2, aux)), new_size < nline) {
+        aux++;
     }
 
-    return nline;
+    return new_size;
 }
 
 
@@ -270,69 +265,29 @@ int **matrix_mult_strassen(int *sizes, int *nlines, int *ncol, int **matrix_1, i
 int main() {
     int nlines[2], ncol[2], i, j;
 
-//    cout << "Digite o tamanho da primeira matriz\n\tLinhas: ";
-//    cin >> nlines[0];
-//    cout << "\tColunas: ";
-//    cin >> ncol[0];
-//    int **matrix_1 = create_pre_matrix(nlines[0], ncol[0]);
-//
-//    cout << "Digite o tamanho da segunda matriz\n\tLinhas: ";
-//    cin >> nlines[1];
-//    cout << "\tColunas: ";
-//    cin >> ncol[1];
-//    int **matrix_2 = create_pre_matrix(nlines[1], ncol[1]);
-//
-//    int sizes[2];
-//    int **new_matrix = matrix_mult_strassen(sizes, nlines, ncol, matrix_1, matrix_2);
-//
-//    cout << "\n\nSua matriz : \n\t";
-//    if(new_matrix != nullptr) {
-//        for(i = 0; i < sizes[0]; i++) {
-//            for(j = 0; j < sizes[1]; j++) {
-//                cout << new_matrix[i][j] << "  ";
-//            }
-//
-//            cout << "\n\t";
-//        }
-//    }
-
+    cout << "Digite o tamanho da primeira matriz\n\tLinhas: ";
     cin >> nlines[0];
+    cout << "\tColunas: ";
     cin >> ncol[0];
-    nlines[1] = ncol[0];
+    int **matrix_1 = create_pre_matrix(nlines[0], ncol[0]);
+
+    cout << "Digite o tamanho da segunda matriz\n\tLinhas: ";
+    cin >> nlines[1];
+    cout << "\tColunas: ";
     cin >> ncol[1];
-
-
-    int **matrix_a = create_dim_matrix(nlines[0], ncol[0]);
-    int **matrix_b = create_dim_matrix(nlines[1], ncol[1]);
-
-    for(i = 0; i < nlines[0]; i ++) {
-        for(j = 0; j < ncol[0]; j ++) {
-            cin >> matrix_a[i][j];
-        }
-    }
-
-    for(i = 0; i < nlines[1]; i ++) {
-        for(j = 0; j < ncol[1]; j ++) {
-            cin >> matrix_b[i][j];
-        }
-    }
+    int **matrix_2 = create_pre_matrix(nlines[1], ncol[1]);
 
     int sizes[2];
-    int **result = matrix_mult_strassen(sizes, nlines, ncol, matrix_a, matrix_b);
+    int **new_matrix = matrix_mult_strassen(sizes, nlines, ncol, matrix_1, matrix_2);
 
-    int aux = sizes[1] - 1;
-    if(result != nullptr) {
+    if(new_matrix != nullptr) {
+        cout << "\n\nSua matriz : \n\t";
         for(i = 0; i < sizes[0]; i++) {
             for(j = 0; j < sizes[1]; j++) {
-
-                cout << result[i][j];
-
-                if(j != aux) {
-                    cout << " ";
-                }
+                cout << new_matrix[i][j] << "  ";
             }
 
-            cout << "\n";
+            cout << "\n\t";
         }
     }
 
