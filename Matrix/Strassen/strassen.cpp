@@ -269,25 +269,26 @@ int main() {
     cin >> nlines[0];
     cout << "\tColunas: ";
     cin >> ncol[0];
-    int **matrix_1 = create_pre_matrix(nlines[0], ncol[0]);
 
     cout << "Digite o tamanho da segunda matriz\n\tLinhas: ";
     cin >> nlines[1];
     cout << "\tColunas: ";
     cin >> ncol[1];
+
+    int **matrix_1 = create_pre_matrix(nlines[0], ncol[0]);
     int **matrix_2 = create_pre_matrix(nlines[1], ncol[1]);
 
     int sizes[2];
     int **new_matrix = matrix_mult_strassen(sizes, nlines, ncol, matrix_1, matrix_2);
 
+    cout << "18110470\n" << sizes[0] << " " << sizes[1] << "\n";
     if(new_matrix != nullptr) {
-        cout << "\n\nSua matriz : \n\t";
         for(i = 0; i < sizes[0]; i++) {
-            for(j = 0; j < sizes[1]; j++) {
+            for(j = 0; j < sizes[1] - 1; j++) {
                 cout << new_matrix[i][j] << "  ";
             }
 
-            cout << "\n\t";
+            cout << new_matrix[i][j] << "\n";
         }
     }
 
