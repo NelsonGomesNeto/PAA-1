@@ -1,0 +1,11 @@
+/home/easy_lab/Programas/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento"
+-- The C compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug

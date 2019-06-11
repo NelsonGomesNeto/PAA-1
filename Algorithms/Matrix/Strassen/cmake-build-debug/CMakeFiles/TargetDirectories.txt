@@ -1,0 +1,3 @@
+/home/easy_lab/CLionProjects/PAA/Matrix/Strassen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/easy_lab/CLionProjects/PAA/Matrix/Strassen/cmake-build-debug/CMakeFiles/Strassen.dir
+/home/easy_lab/CLionProjects/PAA/Matrix/Strassen/cmake-build-debug/CMakeFiles/edit_cache.dir

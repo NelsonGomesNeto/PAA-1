@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Strassen.dir/strassen.cpp.o  -o Strassen 
