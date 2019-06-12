@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/easy_lab/Programas/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/joao/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.7479.33/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/easy_lab/Programas/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/joao/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.7479.33/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento"
+CMAKE_SOURCE_DIR = "/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. 
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/easy_lab/Programas/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/joao/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.7479.33/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/easy_lab/Programas/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/joao/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.7479.33/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles" "/home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles" "/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/easy_lab/CLionProjects/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ depend:
 	$(MAKE) -f CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build.make CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build
 .PHONY : 2742___Sr__Indeciso_e_o_evento/fast
 
-main.o: main.c.o
+main.o: main.cpp.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build.make CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.c.o
-.PHONY : main.c.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build.make CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-main.i: main.c.i
+main.i: main.cpp.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build.make CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.c.i
-.PHONY : main.c.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build.make CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main.s: main.c.s
+main.s: main.cpp.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build.make CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.c.s
-.PHONY : main.c.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/build.make CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:

@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.c.o  -o 2742___Sr__Indeciso_e_o_evento 
+/usr/bin/c++  -g   CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir/main.cpp.o  -o 2742___Sr__Indeciso_e_o_evento 
