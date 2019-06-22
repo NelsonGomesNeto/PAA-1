@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/2390_-_Viagem_para_Marte.dir/main.cpp.o  -o 2390_-_Viagem_para_Marte 

@@ -3,11 +3,12 @@
 using namespace std;
 
 unsigned int mod_bs_0(unsigned int *array, unsigned int pivot, unsigned int start, unsigned int end) {
+    unsigned int mid = (start + end) / 2;
+
     if(start == end) {
-        return start;
+        return mid;
     }
 
-    unsigned int mid = (start + end) / 2;
 
     if(array[mid] >= pivot) {
         return mod_bs_0(array, pivot, start, mid - 1);
@@ -17,20 +18,19 @@ unsigned int mod_bs_0(unsigned int *array, unsigned int pivot, unsigned int star
     }
 }
 
-unsigned int mod_bs_1(unsigned int *array, unsigned int pivot, unsigned int start, unsigned int end) {
+unsigned int mod_bs_1(unsigned int *array, unsigned int pivot, unsigned int start, unsigned int end, unsigned int size) {
     unsigned int mid = (start + end) / 2;
 
     if(start == end) {
-        return
-    } else if(array[mid + 1] < pivot) {
         return mid;
     }
 
     if(array[mid] <= pivot) {
-        return mod_bs_1(array, pivot, mid + 1, end);
+        if(array[mid + 1] <)
+        return mod_bs_1(array, pivot, mid + 1, end, size);
     }
     else {
-        return mod_bs_1(array, pivot, start, mid - 1);
+        return mod_bs_1(array, pivot, start, mid - 1, size);
     }
 }
 
@@ -50,7 +50,7 @@ int main() {
 
         answer = mod_bs_0(money, aux, 0, size);
         cout << answer << " ";
-        answer = mod_bs_1(money, aux, 0, size);
+        answer = mod_bs_1(money, aux, 0, size, n);
         cout << answer << "\n";
     }
 
