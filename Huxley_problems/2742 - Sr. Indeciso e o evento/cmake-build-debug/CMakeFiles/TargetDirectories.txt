@@ -1,3 +1,0 @@
-/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles/2742___Sr__Indeciso_e_o_evento.dir
-/home/joao/my_workspace/PAA/Huxley_problems/2742 - Sr. Indeciso e o evento/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,3 +1,0 @@
-/home/joao/my_workspace/PAA/Huxley_problems/2390 - Viagem para Marte/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/joao/my_workspace/PAA/Huxley_problems/2390 - Viagem para Marte/cmake-build-debug/CMakeFiles/2390_-_Viagem_para_Marte.dir
-/home/joao/my_workspace/PAA/Huxley_problems/2390 - Viagem para Marte/cmake-build-debug/CMakeFiles/edit_cache.dir

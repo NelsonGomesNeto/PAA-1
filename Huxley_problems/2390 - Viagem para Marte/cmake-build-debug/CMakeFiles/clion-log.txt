@@ -1,4 +1,0 @@
-/home/joao/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.7479.33/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/joao/my_workspace/PAA/Huxley_problems/2390 - Viagem para Marte"
--- Configuring done
--- Generating done
--- Build files have been written to: /home/joao/my_workspace/PAA/Huxley_problems/2390 - Viagem para Marte/cmake-build-debug
