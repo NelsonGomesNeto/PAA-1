@@ -112,11 +112,11 @@ public:
     }
 
     long amountPair(long x, long y, long idx, long left, long right) {
-        travel(segTreePair, x, y, idx, left, right);
+        return travel(segTreePair, x, y, idx, left, right);
     }
 
     long amountOdd(long x, long y, long idx, long left, long right) {
-        travel(segTreeOdd, x, y, idx, left, right);
+        return travel(segTreeOdd, x, y, idx, left, right);
     }
 
     long getSizeValues() {
@@ -167,11 +167,11 @@ int main() {
                 break;
 
             case 1:
-                cout << segTree->amountPair(b + 1, c + 2, 1, 1, segTree->getSizeValues()) << endl;
+                cout << segTree->amountPair(b, c + 1, 1, 1, segTree->getSizeValues()) << endl;
                 break;
 
             case 2:
-                cout << segTree->amountOdd(b + 1, c + 2, 1, 1, segTree->getSizeValues()) << endl;
+                cout << segTree->amountOdd(b, c + 1, 1, 1, segTree->getSizeValues()) << endl;
                 break;
 
             default:
