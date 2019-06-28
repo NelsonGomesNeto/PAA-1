@@ -144,7 +144,7 @@ int main() {
     long n = 0, i, q, a, b, c;
     cin >> n;
 
-    vector<long> *array = new vector<long>;
+    auto *array = new vector<long>;
     long aux;
     for(i = 0; i < n; i++) {
         cin >> aux;
@@ -152,7 +152,7 @@ int main() {
     }
 
     cin >> q;
-    SegmenteTree *segTree = new SegmenteTree(array);
+    auto *segTree = new SegmenteTree(array);
     delete array;
 
 //    segTree->print();
