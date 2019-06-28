@@ -4,15 +4,6 @@
 
 using namespace std;
 
-long min(long a, long b) {
-    if(a < b) {
-        return a;
-    }
-    else {
-        return b;
-    }
-}
-
 class SegmenteTree {
     private:
         vector<pair<long,long>> *segTree;
@@ -125,14 +116,6 @@ class SegmenteTree {
         long getSizeValues() {
             return values->size();
         }
-
-        void print() {
-            for(auto &i : *segTree) {
-                cout << "(" << i.first << " " << i.second << ") ";
-            }
-
-            cout << "\n";
-        }
 };
 
 int main() {
@@ -146,7 +129,6 @@ int main() {
         array->push_back(a);
     }
     auto *segTree = new SegmenteTree(array);
-//    segTree->print();
     delete array;
 
     cin >> q;
@@ -157,8 +139,6 @@ int main() {
         if(c == 'Q') {
             pair<long, long> p = segTree->sum(a + 1, b + 2, 1, 1, segTree->getSizeValues());
             cout << p.first << " " << p.second << "\n";
-
-//            cout << p.first << " " << p.second << "\n";
         }
         else {
             segTree->modify(a + 1, b, 1, 1, segTree->getSizeValues());
