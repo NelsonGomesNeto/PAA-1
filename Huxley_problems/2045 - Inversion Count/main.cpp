@@ -2,39 +2,26 @@
 
 using namespace std;
 
-long _ic(const long array[], const unsigned left, const unsigned mid, const unsigned right) {
-    unsigned i = left, j = right, inv_count = 0;
+long countInversion(const long array[], const unsigned left, const unsigned right) {
+    unsigned inv_count = 0;
 
-    while(i < mid && j <= right) {
-        if(array[i] > array[j]) {
-            j++;
-            inv_count += (mid - i);
-        }
-        else {
-            i++;
+    if(right > left) {
+        unsigned  i = left, j = right, mid = (left + right) / 2;
+        inv_count = countInversion(array, left, mid);
+        mid++;
+        inv_count += countInversion(array, mid, right);
+
+        while (i < mid && j <= right) {
+            if (array[i] > array[j]) {
+                j++;
+                inv_count += (mid - i);
+            } else {
+                i++;
+            }
         }
     }
 
     return inv_count;
-}
-
-long _ct(const long array[], const unsigned left, const unsigned right) {
-    unsigned mid, inc_count = 0;
-
-    if(right > left) {
-        mid = (left + right) / 2;
-        inc_count = _ct(array, left, mid);
-        inc_count += _ct(array, mid + 1, right);
-
-        inc_count += _ic(array, left, mid + 1, right);
-    }
-
-    return inc_count;
-}
-
-long countInversion(const long array[], const unsigned size) {
-    long temp[size];
-    return _ct(array, 0, size - 1);
 }
 
 int main() {
@@ -46,7 +33,7 @@ int main() {
         cin >> t;
         long array[t];
         for(j = 0; j < t; j++) cin >> array[j];
-        cout << countInversion(array, t) << endl;
+        cout << countInversion(array, 0, t - 1) << endl;
     }
 
     return 0;
