@@ -3,8 +3,8 @@
 
 using namespace std;
 
-unsigned merge(long array[], long temp_array[], unsigned left, unsigned mid, unsigned right) {
-    unsigned i = left, j = right, k = mid, inv_count = 0;
+long merge(long array[], long temp_array[], long left, long mid, long right) {
+    long i = left, j = right, k = mid, inv_count = 0;
 
     while(i <= mid && j <= right) {
         if(array[i] <= array[j]) {
@@ -31,8 +31,8 @@ unsigned merge(long array[], long temp_array[], unsigned left, unsigned mid, uns
     return inv_count;
 }
 
-unsigned _ct(long array[], long temp_array[],  unsigned left, unsigned right) {
-    unsigned mid, inv_count = 0;
+long _ct(long array[], long temp_array[],  long left, long right) {
+    long mid, inv_count = 0;
 
     if(right > left) {
         mid = (left + right) / 2;
@@ -46,13 +46,13 @@ unsigned _ct(long array[], long temp_array[],  unsigned left, unsigned right) {
     return inv_count;
 }
 
-unsigned countInversion(long array[], unsigned size) {
+long countInversion(long array[], long size) {
     long temp_array[size];
     return _ct(array, temp_array, 0, size - 1);
 }
 
 int main() {
-    unsigned i, j, n, t;
+    long i, j, n, t;
 
     cin >> n;
 
